@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  parser:
+    image: romitsagu/assettoserver:leaderboard-parser
+    container_name: Assetto-Corsa-Server-Leaderboard-Parser
+    restart: always
