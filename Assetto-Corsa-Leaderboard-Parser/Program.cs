@@ -83,7 +83,7 @@ namespace Assetto_Corsa_Leaderboard_Parser
                     // Check if the entry already exists in the database
                     bool exists = await dbContext.Leaderboard.AnyAsync(lb =>
                         lb.Date == entry.Date &&
-                        lb.Name == entry.Name &&
+                        //lb.Name == entry.Name &&  Names can be changed by users, so we can't use them as a unique identifier
                         lb.Car == entry.Car &&
                         lb.Duration == entry.Duration &&
                         lb.Score == entry.Score);
